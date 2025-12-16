@@ -46,12 +46,18 @@ def convert_parquet_to_entry_dict(parquet_path: str, output_path: str):
         entry = row.to_dict()
         
         # Parse string fields that should be dicts
+        # For db_bench
         if 'answer_info' in entry and isinstance(entry['answer_info'], str):
             entry['answer_info'] = parse_string_dict(entry['answer_info'])
         if 'table_info' in entry and isinstance(entry['table_info'], str):
             entry['table_info'] = parse_string_dict(entry['table_info'])
         if 'skill_list' in entry and isinstance(entry['skill_list'], str):
             entry['skill_list'] = parse_string_dict(entry['skill_list'])
+        # For os_interaction
+        if 'initialization_command_item' in entry and isinstance(entry['initialization_command_item'], str):
+            entry['initialization_command_item'] = parse_string_dict(entry['initialization_command_item'])
+        if 'evaluation_info' in entry and isinstance(entry['evaluation_info'], str):
+            entry['evaluation_info'] = parse_string_dict(entry['evaluation_info'])
         
         entry_dict[sample_id] = entry
     
@@ -67,8 +73,8 @@ def convert_parquet_to_entry_dict(parquet_path: str, output_path: str):
     print(f"Converted {len(entry_dict)} entries to {output_path}")
 
 if __name__ == "__main__":
-    parquet_file = "./data/db_bench/train-00000-of-00001.parquet"
-    output_file = "./data/v0303/db_bench/processed/v0317_first500/entry_dict.json"
+    parquet_file = "/home/wangziyi/PoA/data/os_interaction/train-00000-of-00001.parquet"
+    output_file = "./data/v0303/os_interaction/processed/v0409_tcc_9_to_12_first500/entry_dict.json"
     
     if len(sys.argv) > 1:
         parquet_file = sys.argv[1]
