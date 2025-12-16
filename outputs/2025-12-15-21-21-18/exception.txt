@@ -1,0 +1,60 @@
+Time: 2025-12-15 21:21:30
+Exception: [HttpServerException] Original error message: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/api/reset
+Error information:
+- status_code: 500
+- text: Internal Server Error
+Request information:
+- address: http://127.0.0.1:8000/api/reset
+- response_cls: <class 'src.typings.response.TaskResponse.Reset'>
+- data_cls: <class 'src.typings.request.TaskRequest.Reset'>
+- data_dict_str_length: 305
+- data_dict: {'session': {'task_name': <TaskName.DB_BENCH: 'db_bench'>, 'sample_index': '0', 'sample_status': <SampleStatus.INITIAL: 'initial'>, 'chat_history': {'value': []}, 'finish_reason': None, 'task_output': None, 'evaluation_record': {'outcome': <SessionEvaluationOutcome.UNSET: 'unset'>, 'detail_dict': None}}}
+Traceback (most recent call last):
+  File "/home/wangziyi/LifelongAgentBench/src/utils/client.py", line 153, in _call_server
+    response.raise_for_status()  # The statement will definitely raise requests.exceptions.HTTPError.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wangziyi/micromamba/envs/Agent-PEFT/lib/python3.11/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/api/reset
+
+
+Time: 2025-12-15 21:21:32
+Exception: [HttpServerException] Original error message: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/api/reset
+Error information:
+- status_code: 500
+- text: Internal Server Error
+Request information:
+- address: http://127.0.0.1:8000/api/reset
+- response_cls: <class 'src.typings.response.TaskResponse.Reset'>
+- data_cls: <class 'src.typings.request.TaskRequest.Reset'>
+- data_dict_str_length: 305
+- data_dict: {'session': {'task_name': <TaskName.DB_BENCH: 'db_bench'>, 'sample_index': '0', 'sample_status': <SampleStatus.INITIAL: 'initial'>, 'chat_history': {'value': []}, 'finish_reason': None, 'task_output': None, 'evaluation_record': {'outcome': <SessionEvaluationOutcome.UNSET: 'unset'>, 'detail_dict': None}}}
+Traceback (most recent call last):
+  File "/home/wangziyi/LifelongAgentBench/src/utils/client.py", line 153, in _call_server
+    response.raise_for_status()  # The statement will definitely raise requests.exceptions.HTTPError.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wangziyi/micromamba/envs/Agent-PEFT/lib/python3.11/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/api/reset
+
+
+Time: 2025-12-15 21:21:36
+Exception: [HttpServerException] Original error message: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/api/reset
+Error information:
+- status_code: 500
+- text: Internal Server Error
+Request information:
+- address: http://127.0.0.1:8000/api/reset
+- response_cls: <class 'src.typings.response.TaskResponse.Reset'>
+- data_cls: <class 'src.typings.request.TaskRequest.Reset'>
+- data_dict_str_length: 305
+- data_dict: {'session': {'task_name': <TaskName.DB_BENCH: 'db_bench'>, 'sample_index': '0', 'sample_status': <SampleStatus.INITIAL: 'initial'>, 'chat_history': {'value': []}, 'finish_reason': None, 'task_output': None, 'evaluation_record': {'outcome': <SessionEvaluationOutcome.UNSET: 'unset'>, 'detail_dict': None}}}
+Traceback (most recent call last):
+  File "/home/wangziyi/LifelongAgentBench/src/utils/client.py", line 153, in _call_server
+    response.raise_for_status()  # The statement will definitely raise requests.exceptions.HTTPError.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/wangziyi/micromamba/envs/Agent-PEFT/lib/python3.11/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:8000/api/reset
+
+

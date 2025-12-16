@@ -1,0 +1,14 @@
+{
+  "task_name": "db_bench",
+  "sample_index": "0",
+  "sample_status": "initial",
+  "chat_history": {
+    "value": []
+  },
+  "finish_reason": null,
+  "task_output": null,
+  "evaluation_record": {
+    "outcome": "unset",
+    "detail_dict": null
+  }
+}

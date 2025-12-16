@@ -1,0 +1,78 @@
+agent_dict:
+  language_model_agent:
+    module: src.agents.instance.language_model_agent.LanguageModelAgent
+    parameters:
+      inference_config_dict: {}
+      language_model: Fill the parameter 'language_model_name' in assignment config.
+      system_prompt: You are a helpful assistant.
+assignment_config:
+  agent:
+    custom_parameters:
+      inference_config_dict:
+        do_sample: false
+        max_new_tokens: 512
+        num_beams: 1
+        temperature: null
+        top_k: null
+        top_p: null
+      language_model: Llama-3.1-8B-Instruct
+    name: language_model_agent
+  callback_dict:
+    callback_0:
+      name: current_session_saving_callback
+    callback_1:
+      name: consecutive_abnormal_agent_inference_process_handling_callback
+  language_model_list:
+  - name: Llama-3.1-8B-Instruct
+  output_dir: outputs/{TIMESTAMP}
+  sample_order: default
+  task: db_bench
+callback_dict:
+  consecutive_abnormal_agent_inference_process_handling_callback:
+    module: src.callbacks.instance.consecutive_abnormal_agent_inference_process_handling_callback.ConsecutiveAbnormalAgentInferenceProcessHandlingCallback
+    parameters:
+      tolerance_count: 8
+  current_session_saving_callback:
+    module: src.callbacks.instance.current_session_saving_callback.CurrentSessionSavingCallback
+environment_config:
+  chat_history_item_factory_client:
+    module: src.factories.chat_history_item.online.client.ChatHistoryItemFactoryClient
+    parameters:
+      request_timeout: 120
+      server_address: http://127.0.0.1:8001/api
+  interpreter_path: /home/wangziyi/micromamba/envs/Agent-PEFT/bin/python
+  server_side_controller_address: http://127.0.0.1:8003
+  task_client:
+    module: src.tasks.client.TaskClient
+    parameters:
+      request_timeout: 120
+      server_address: http://127.0.0.1:8000/api
+  use_task_client_flag: true
+language_model_dict:
+  Llama-3.1-8B-Instruct:
+    module: src.language_models.instance.huggingface_language_model.HuggingfaceLanguageModel
+    parameters:
+      device_map: niuload
+      dtype: bfloat16
+      model_name_or_path: meta-llama/Llama-3.1-8B-Instruct
+      role_dict:
+        agent: assistant
+        user: user
+logger_config:
+  level: INFO
+  log_file_path: default
+  logger_name: lifelong_agent_bench
+task_dict:
+  db_bench:
+    module: src.tasks.instance.db_bench.DBBench
+    parameters:
+      chat_history_item_factory:
+        module: src.factories.chat_history_item.ChatHistoryItemFactory
+        parameters:
+          chat_history_item_dict_path: ./chat_history_items/standard/db_bench.json
+      data_file_path: ./data/v0303/db_bench/processed/v0317_first500/entry_dict.json
+      max_round: 3
+      task_name:
+        module: src.typings.TaskName
+        parameters:
+          value: db_bench
