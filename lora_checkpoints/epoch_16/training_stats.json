@@ -1,0 +1,7 @@
+{
+  "epoch": 16,
+  "num_preference_pairs": 8,
+  "correct_count": 8,
+  "failed_count": 8,
+  "success_rate": 50.0
+}

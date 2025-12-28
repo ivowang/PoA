@@ -1,0 +1,8 @@
+{
+  "epoch": 1,
+  "num_successful_trajectories": 16,
+  "total_correct": 16,
+  "total_failed": 0,
+  "total_attempts": 35,
+  "success_rate": 45.714285714285715
+}

@@ -73,8 +73,8 @@ def convert_parquet_to_entry_dict(parquet_path: str, output_path: str):
     print(f"Converted {len(entry_dict)} entries to {output_path}")
 
 if __name__ == "__main__":
-    parquet_file = "/home/wangziyi/PoA/data/os_interaction/train-00000-of-00001.parquet"
-    output_file = "./data/v0303/os_interaction/processed/v0409_tcc_9_to_12_first500/entry_dict.json"
+    parquet_file = "/home/wangziyi/PoA/data/knowledge_graph/train-00000-of-00001.parquet"
+    output_file = "./data/v0303/knowledge_graph/processed/v0409_tcc_9_to_12_first500/entry_dict.json"
     
     if len(sys.argv) > 1:
         parquet_file = sys.argv[1]

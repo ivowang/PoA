@@ -1,6 +1,6 @@
 {
   "task_name": "os_interaction",
-  "sample_index": "20",
+  "sample_index": "22",
   "sample_status": "running",
   "chat_history": {
     "value": [
@@ -14,7 +14,7 @@
       },
       {
         "role": "user",
-        "content": "Create a script '/validator.sh' that exits with code 0 only if '/logs' directory exists, '/logs/system.log' contains 'boot_complete', and user 'monitor' belongs to group 'audit'. Ensure the script has execute permissions."
+        "content": "Create a directory structure '~/main/data', place a file 'target.txt' containing 'data' inside, create symbolic links 'data_link' in '~/links' pointing to the absolute path of the target file and 'rel_link' in '~/main' using a relative path, then set data_link's target permissions to 644."
       }
     ]
   },

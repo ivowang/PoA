@@ -19,3 +19,5 @@ coredumpy~=0.4.2
 bashlex~=0.18
 tqdm~=4.66.4
 niuload ~= 0.2.4
+peft~=0.10.0
+accelerate~=0.30.0
