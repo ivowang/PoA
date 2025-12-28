@@ -208,3 +208,7 @@ __marimo__/
 
 # runtime / debug outputs
 outputs/**/coredumpy/
+
+# LoRA checkpoints (large files)
+lora_checkpoints/**/*.safetensors
+lora_checkpoints/**/*.bin
